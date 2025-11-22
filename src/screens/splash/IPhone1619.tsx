@@ -53,8 +53,8 @@ export default function IPhone1619(props: Props) {
               <View style={styles.box2}>
               </View>
             </View>
-            <Pressable onPress={handleNext} style={styles.text}>
-              <Text style={styles.buttonText}>{"Next"}</Text>
+            <Pressable onPress={handleNext} style={[styles.text, { backgroundColor: "#FFD700", borderColor: "#FFD700" }]}>
+              <Text style={[styles.buttonText, { color: "#000000" }]}>{"Next"}</Text>
             </Pressable>
           </View>
         </View>
@@ -99,18 +99,21 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 65,
     marginHorizontal: 36,
-    marginTop:-40
+    marginTop: -40,
   },
   row2: {
     flexDirection: "row",
     alignItems: "center",
-    
+    justifyContent: "flex-end",
+    flex: 1,
   },
   row3: {
     flexDirection: "row",
-    marginRight: 31,
+    marginRight: 20,
+    alignItems: "center",
   },
   scrollView: {
     flex: 1,
@@ -118,18 +121,25 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   text: {
-    color: "#000000",
-    fontSize: 16,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    minWidth: 50,
-    minHeight: 40,
-    justifyContent: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    borderRadius: 24,
+    backgroundColor: "#EFEFEF",
+    borderWidth: 1,
+    borderColor: "#CCCCCC",
+    elevation: 3,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    minWidth: 80,
     alignItems: "center",
+    justifyContent: "center",
   },
   buttonText: {
     color: "#000000",
     fontSize: 16,
+    fontWeight: '600',
   },
   text1: {
   fontSize: 34,        // bigger

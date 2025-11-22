@@ -100,9 +100,8 @@ const IPhone1642: React.FC = () => {
   };
 
   const handleSkipPress = () => {
-    animateButtonPress(skipBounce, () => {
-      Alert.alert('Info', 'Skipping for now');
-    });
+    // @ts-ignore - HomeRent is now properly typed in AuthStackParamList
+    navigation.navigate('HomeRent');
   };
 
   return (

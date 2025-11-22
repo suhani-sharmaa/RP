@@ -8,6 +8,8 @@ import Register from '../screens/auth/Register';
 import MobileLogin from '../screens/auth/mobilelogin';
 import Verification from '../screens/auth/Verification';
 import ForgotPasswordScreen from '../screens/auth/ForgotPasswordScreen';
+import HomeRent from '../screens/auth/HomeRent';
+import PropertyList from '../screens/auth/PropertyList';
 
 const Stack = createStackNavigator<AuthStackParamList>();
 
@@ -44,6 +46,20 @@ export function AuthNavigator() {
       <Stack.Screen 
         name="ForgotPassword" 
         component={ForgotPasswordScreen}
+        options={{
+          headerShown: false
+        }} 
+      />
+      <Stack.Screen 
+        name="HomeRent" 
+        component={HomeRent}
+        options={{
+          headerShown: false
+        }} 
+      />
+      <Stack.Screen 
+        name="PropertyList" 
+        component={PropertyList}
         options={{
           headerShown: false
         }} 
